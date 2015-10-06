@@ -4,7 +4,6 @@ packages = [
     "php-xsl",
     "php-curl",
     "php55-xmlrpc",
-    "php55-devel",
     "php55-gd",
     "php55-mbstring",
     "php55-cli",
