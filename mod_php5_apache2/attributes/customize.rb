@@ -1,5 +1,5 @@
 packages = [
-    "php-common",
+    "php55-common",
     "php-process",
     "php-xsl",
     "php-curl",
