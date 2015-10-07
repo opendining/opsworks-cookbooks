@@ -19,11 +19,11 @@
 
 case node[:platform_family]
 when 'debian'
-  package 'php55' do
+  package 'libapache2-mod-php5' do
     action :install
   end
 when 'rhel'
-  package 'php' do
+  package 'php55' do
     action :install
     notifies :run, "execute[generate-module-list]", :immediately
     not_if 'which php'
