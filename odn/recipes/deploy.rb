@@ -17,4 +17,16 @@ node[:deploy].each do |application, deploy|
     ignore_failure true
   end
 
+  execute "chmod -R 777 kohana/application/cache/" do
+    user "root"
+    cwd current_dir
+    ignore_failure true
+  end
+
+  execute "chmod -R 777 kohana/application/logs/" do
+    user "root"
+    cwd current_dir
+    ignore_failure true
+  end
+
 end
