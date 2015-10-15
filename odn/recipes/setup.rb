@@ -5,6 +5,11 @@ execute "no | pecl install mongo" do
   ignore_failure true
 end
 
+execute "no | pear install http_request2" do
+  user "root"
+  ignore_failure true
+end
+
 execute "echo 'extension=mongo.so' | sudo tee -a /etc/php5/apache2/conf.d/20-mongo.ini" do
   user "root"
   ignore_failure true
