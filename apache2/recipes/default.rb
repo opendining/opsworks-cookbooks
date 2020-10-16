@@ -53,7 +53,7 @@ bash 'logdir_existence_and_restart_apache2' do
     done
   EOF
   action :nothing
-  notifies :restart, resources(:service => 'apache2')
+  notifies :reload, resources(:service => 'apache2')
   timeout 70
 end
 
